@@ -1,0 +1,4 @@
+interface:
+  display_name: "期中考试反馈"
+  short_description: "按三科题型分数生成并写入期中考试反馈"
+  default_prompt: "Use $midterm-exam-feedback to generate and write my three-subject midterm feedback."
