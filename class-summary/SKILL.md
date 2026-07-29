@@ -1,9 +1,9 @@
 ---
-name: 课堂小结
+name: class-summary
 description: 为火箭2班生成课堂小结 Word 文档。当用户提到"课堂小结"、"写小结"、"生成小结"、"今天的小结"、或需要在乐考学科目录下创建课堂小结文档时，必须使用此 skill。即使只提到"小结"或"写今天的总结"，也应触发。
 ---
 
-# 课堂小结 Skill
+# class-summary
 
 为火箭2班的学科课堂生成标准化的小结文档，以 .docx 格式保存在对应学科目录下。
 
@@ -43,10 +43,10 @@ description: 为火箭2班生成课堂小结 Word 文档。当用户提到"课�
 
 ### 第四步：直接生成文档
 
-完成 3 条授课内容和 3 条学习要求后，直接调用 `scripts/create_docx.py` 生成 .docx 文件；不要展示草稿、不要请求用户确认。仅当用户明确要求修改已生成内容时，再按要求修改并重新导出文档。
+完成 3 条授课内容和 3 条学习要求后，直接调用 `scripts/create_docx.py` 生成 .docx 文件；不要展示草稿或请求用户确认。仅当用户明确要求修改时，再更新内容并重新导出。
 
 ```bash
-python "C:\Users\Lenovo\.claude\skills\课堂小结\scripts\create_docx.py" \
+python "C:\Users\Lenovo\.claude\skills\class-summary\scripts\create_docx.py" \
   --title "火箭2班[学科]小结[日期]" \
   --content '["内容1", "内容2", "内容3"]' \
   --requirements '["要求1", "要求2", "要求3"]' \
